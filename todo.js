@@ -6,5 +6,9 @@ function addTodo(text) {
 }
 
 function removeTodo(index) {
-  // TODO: implement
+  todos.splice(index, 1);
+}
+
+function listTodos() {
+  return todos;
 }
