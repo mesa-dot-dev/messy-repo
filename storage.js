@@ -2,7 +2,11 @@
 const STORAGE_KEY = 'tiny-todos';
 
 export function saveTodos(todos) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+  } catch (e) {
+    console.error('Failed to save todos:', e);
+  }
 }
 
 export function loadTodos() {
