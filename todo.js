@@ -2,7 +2,7 @@
 let todos = [];
 
 function addTodo(text) {
-  todos.push({ text, done: false });
+  todos.push({ id: Date.now(), text, done: false });
 }
 
 function removeTodo(index) {
