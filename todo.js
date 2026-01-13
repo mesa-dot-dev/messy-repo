@@ -17,3 +17,9 @@ function markDone(id) {
   const todo = todos.find(t => t.id === id);
   if (todo) todo.done = true;
 }
+
+function clearCompleted() {
+  todos = todos.filter(t => !t.done);
+}
+
+export { addTodo, removeTodo, listTodos, markDone, clearCompleted };
