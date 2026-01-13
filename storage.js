@@ -1,5 +1,5 @@
 // Persistent storage for todos
-const STORAGE_KEY = 'todos';
+const STORAGE_KEY = 'tiny-todos';
 
 export function saveTodos(todos) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
