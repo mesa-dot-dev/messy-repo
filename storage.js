@@ -10,6 +10,11 @@ export function saveTodos(todos) {
 }
 
 export function loadTodos() {
-  const data = localStorage.getItem(STORAGE_KEY);
-  return data ? JSON.parse(data) : [];
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    return data ? JSON.parse(data) : [];
+  } catch (e) {
+    console.error('Failed to load todos:', e);
+    return [];
+  }
 }
