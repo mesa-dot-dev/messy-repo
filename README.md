@@ -1,6 +1,6 @@
 # Tiny Todo
 
-A simple todo app.
+A simpler todo app.
 
 ## Usage
 
