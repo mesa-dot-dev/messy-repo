@@ -1,25 +1,25 @@
 // Todo Application v1.0
 let todos = [];
 
-function addTodo(text, priority = 'medium') {
+function createTodo(text, priority = 'medium') {
   todos.push({ id: Date.now(), text, done: false, priority });
 }
 
-function removeTodo(index) {
+function deleteTodo(index) {
   todos.splice(index, 1);
 }
 
-function listTodos() {
+function getAllTodos() {
   return todos;
 }
 
-function markDone(id) {
+function markTodoComplete(id) {
   const todo = todos.find(t => t.id === id);
   if (todo) todo.done = true;
 }
 
-function clearCompleted() {
+function removeCompletedTodos() {
   todos = todos.filter(t => !t.done);
 }
 
-export { addTodo, removeTodo, listTodos, markDone, clearCompleted };
+export { createTodo, deleteTodo, getAllTodos, markTodoComplete, removeCompletedTodos };
