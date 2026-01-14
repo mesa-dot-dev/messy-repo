@@ -1,4 +1,5 @@
 {
   "maxTodos": 100,
-  "defaultPriority": "medium"
+  "defaultPriority": "medium",
+  "authEnabled": true
 }

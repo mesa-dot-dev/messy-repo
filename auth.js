@@ -2,6 +2,16 @@
 let currentUser = null;
 
 export function login(username, password) {
-  // TODO: validate
+  if (!username || !password) {
+    throw new Error('Invalid credentials');
+  }
   currentUser = { username };
+}
+
+export function logout() {
+  currentUser = null;
+}
+
+export function getCurrentUser() {
+  return currentUser;
 }
